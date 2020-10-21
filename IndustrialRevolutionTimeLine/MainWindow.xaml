@@ -53,7 +53,7 @@
             </Button.Background>
         </Button>
         <TextBox Text="{Binding Value, ElementName=slValue, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Right" Margin="501,591,535,10" FontSize="48" BorderBrush="{x:Null}" Name="DateBox" />
-        <Slider Minimum="1700" Maximum="2100" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True" x:Name="slValue" Foreground="{x:Null}" Background="{x:Null}" FontSize="72" Margin="10,475,0,158" IsEnabled="False" />
+        <Slider Style="{StaticResource Horizontal_Slider}" Minimum="1700" Maximum="2100" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True" x:Name="slValue"  FontSize="72" Margin="0,444,10,144" IsEnabled="False"  />
 
     </Grid>
 </Window>
