@@ -5,8 +5,55 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IndustrialRevolutionTimeLine"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        ResizeMode="NoResize"
+        Title="MainWindow" Height="700" Width="1200" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+
+        <Rectangle HorizontalAlignment="Left" Height="92" Margin="0,444,0,0" VerticalAlignment="Top" Width="1194">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0.5"/>
+                    <GradientStop Color="#FFB7EBFF"/>
+                    <GradientStop Color="White" Offset="0.45"/>
+                    <GradientStop Color="#FFB7EBFF" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.504"/>
+                    <GradientStop Color="White" Offset="0.561"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle HorizontalAlignment="Left" Height="100" Margin="0,10,0,0" VerticalAlignment="Top" Width="1194">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB1EAFF" Offset="0.983"/>
+                    <GradientStop Color="White" Offset="0.37"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Label Content="Linea del tiempo Revolución Industrial del 1.0 al 4.0" HorizontalAlignment="Left" Margin="215,24,0,0" VerticalAlignment="Top" Height="62" Width="759" FontSize="30" FontWeight="Bold"/>
+        <Label Content="Linea del tiempo por Equipo-Beta" HorizontalAlignment="Left" Margin="10,83,0,0" VerticalAlignment="Top" Width="200" Height="27"/>
+        <Label Content="La Revolución Industrial es un proceso de transformación económica, social y tecnología, que se inicio en la segunda mitad del siglo XVIII en&#xA;el Reino de Gran Bretaña, y que, según varios expertos, no ha terminado. La industria evoluciona impulsada por la tecnología, transformando&#xA;la manera en que se producen los bienes y servicios que atienden las necesidades de nuestra sociedad. &#xA;¿Quieres conocer los períodos de esta evolución?" HorizontalAlignment="Left" Margin="119,110,0,0" VerticalAlignment="Top" Height="93" Width="1000" FontSize="16"/>
+        <Label Content="Introduce el dia:" HorizontalAlignment="Left" Margin="2,224,0,0" VerticalAlignment="Top" Height="32" Width="160" FontSize="20"/>
+        <TextBox HorizontalAlignment="Left" Height="22" Margin="156,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" Name="Daybox" MaxLength="2" PreviewTextInput="IsNumber2"/>
+        <Label Content="Introduce el mes:" HorizontalAlignment="Left" Margin="238,224,0,0" VerticalAlignment="Top" Height="32" Width="159" FontSize="20"/>
+        <TextBox HorizontalAlignment="Left" Height="22" Margin="402,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" Name="MonthBox" MaxLength="2" PreviewTextInput="IsNumber2"/>
+        <Label Content="Introduce el año:" HorizontalAlignment="Left" Margin="501,224,0,0" VerticalAlignment="Top" Height="34" Width="158" FontSize="20"/>
+        <TextBox HorizontalAlignment="Left" Height="22" Margin="659,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" Name="YearBox" MaxLength="4" PreviewTextInput="IsNumber2"/>
+        <Button Content="Jugar" Margin="748,228,326,0" VerticalAlignment="Top" Height="32" FontSize="14" FontWeight="Bold" Name="PlayButton" Click="PlayButton_Click">
+            <Button.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FFB4EBFF" Offset="1"/>
+                    <GradientStop Color="#FFB7EBFF" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.609"/>
+                    <GradientStop Color="White" Offset="0.457"/>
+                </RadialGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox Text="{Binding Value, ElementName=slValue, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Right" Margin="501,591,535,10" FontSize="48" BorderBrush="{x:Null}" Name="DateBox" />
+        <Slider Minimum="1700" Maximum="2100" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True" x:Name="slValue" Foreground="{x:Null}" Background="{x:Null}" FontSize="72" Margin="10,475,0,158" IsEnabled="False" />
+
     </Grid>
 </Window>
