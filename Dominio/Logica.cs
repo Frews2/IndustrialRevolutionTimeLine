@@ -19,12 +19,12 @@ namespace Dominio
 			meses31.Add(12);
 		}
 
-		public bool esBiciesto(int anio)
+		private bool esBiciesto(int anio)
 		{
 			return (anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0) ? true : false;
 		}
 
-		public bool esFebrero(int mes)
+		private bool esFebrero(int mes)
 		{
 			return mes == 2 ? true : false;
 		}
@@ -33,41 +33,33 @@ namespace Dominio
 		{
 			bool esValida = false;
 
-			if (anio >= 1700 && anio <= 2100)
+			if (mes == 2)
 			{
-				if (mes >= 1 && mes <= 12)
+				if (esBiciesto(anio) && (dia >= 1 && dia <= 29))
 				{
-					if (mes == 2)
-					{
-						if (esBiciesto(anio) && (dia >= 1 && dia <= 29))
-						{
-							esValida = true;
-						}
-						else if (dia >= 1 && dia <= 28)
-						{
-							esValida = true;
-						}
-					}
-					else
-					{
-						if (meses31.Contains(mes))
-						{
-							if ((dia >= 1 && dia <= 31))
-							{
-								esValida = true;
-							}
-						}
-						else
-						{
-							if ((dia >= 1 && dia <= 30))
-							{
-								esValida = true;
-							}
-						}
-					}
-
+					esValida = true;
 				}
-
+				else if (dia >= 1 && dia <= 28)
+				{
+					esValida = true;
+				}
+			}
+			else
+			{
+				if (meses31.Contains(mes))
+				{
+					if ((dia >= 1 && dia <= 31))
+					{
+						esValida = true;
+					}
+				}
+				else
+				{
+					if ((dia >= 1 && dia <= 30))
+					{
+						esValida = true;
+					}
+				}
 			}
 
 			return esValida;

@@ -55,6 +55,14 @@
         <TextBox Text="{Binding Value, ElementName=slValue, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Right" Margin="501,591,535,10" FontSize="48" BorderBrush="{x:Null}" Name="DateBox" />
         <Slider Style="{StaticResource Horizontal_Slider}" Minimum="1700" Maximum="2100" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True" x:Name="slValue"  FontSize="72" Margin="0,444,10,144" IsEnabled="False" Foreground="{x:Null}"  />
         <TextBlock HorizontalAlignment="Left" Margin="873,228,0,0"  Text="{Binding messageText}" VerticalAlignment="Top" Height="32" Width="311" FontSize="14" Foreground="#FFFF0909" Name="ErrorMesage"/>
+        <TextBox HorizontalAlignment="Left" 
+                   Height="131" 
+                   Margin="357,308,0,0" 
+                   TextWrapping="Wrap" 
+                   Text="" 
+                   x:Name="description"
+                   VerticalAlignment="Top"
+                   Width="435"/>
 
 
     </Grid>
