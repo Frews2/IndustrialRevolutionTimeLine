@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace IndustrialRevolutionTimeLine
@@ -40,13 +39,19 @@ namespace IndustrialRevolutionTimeLine
 
         private void PlayButton_Click(object sender, RoutedEventArgs e)
         {
+            int year;
+            int day;
+            int month;
             if(AreFieldsEmpty() == true)
             {
                 MessageBox.Show("Aun no introduce todos lo datos","Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else
             {
-                DateBox.Text = "1800";
+                year = Int32.Parse(YearBox.Text);
+                day = Int32.Parse(Daybox.Text);
+                month = int.Parse(MonthBox.Text);
+                
             }
         }
         private void IsNumber2(object sender, TextCompositionEventArgs e)
